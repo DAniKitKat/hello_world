@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippet Format="1.0.0">
+	<Header>
+		<Title>propv</Title>
+		<Shortcut>propv</Shortcut>
+		<Description>Простой пример сниппета</Description>
+		<Author>Xaoc, для проекта Habrahabr</Author>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal>
+				<ID>type</ID>
+				<ToolTip>Property type</ToolTip>
+				<Default>int</Default>
+			</Literal>
+			<Literal>
+				<ID>property</ID>
+				<ToolTip>Property name</ToolTip>
+				<Default>MyProperty</Default>
+			</Literal>
+			<Literal>
+				<ID>default</ID>
+				<ToolTip>Default value</ToolTip>
+				<Default>0</Default>
+			</Literal>
+		</Declarations>
+		<Code Language="csharp">
+			<![CDATA[public $type$ $property$
+{
+  get
+  {
+    object o = ViewState["$property$"];
+    return (o != null)? ($type$)o: $default$;
+  }
+  set
+  {
+    ViewState["$property$"] = value;
+  }
+}$end$]]>
+		</Code>
+	</Snippet>
+</CodeSnippet>
+</CodeSnippets>

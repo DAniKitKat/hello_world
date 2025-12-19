@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippet Format="1.0.0">
+	<Header>
+		<Title>setlocale</Title>
+		<Shortcut>locale</Shortcut>
+		<Description>изменения раскладки клавиатуры для вывода</Description>
+		<Author>daniil</Author>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+	<Code Language="Cpp">
+		<![CDATA[setlocale($def$, $language$);]]>
+	</Code>
+	<Declarations>
+		<Literal>
+			<ID>def</ID>
+			<ToolTip>Изменение раскладки клавиатуры</ToolTip>
+			<Default>0</Default>
+		</Literal>
+		<Literal>
+			<ID>language</ID>
+			<ToolTip>язык изменения клавиатуры</ToolTip>
+			<Default>"Russian"</Default>
+		</Literal>
+		
+	</Declarations>
+</Snippet>
+</CodeSnippet>
+</CodeSnippets>
